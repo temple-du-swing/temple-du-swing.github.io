@@ -3,3 +3,9 @@ layout: default
 title: Temple du Swing
 ---
 <h1>{{ "Hello World!" | downcase }}</h1>
+
+<button class="foo-button mdc-button">Button</button>
+
+<script>
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+</script>
