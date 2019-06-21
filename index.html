@@ -4,7 +4,17 @@ title: Temple du Swing
 ---
 <h1>{{ "Hello World!" | downcase }}</h1>
 
-<button class="foo-button mdc-button">Button</button>
+
+<p>My super product !</p>
+<button class="foo-button mdc-button snipcart-add-item"
+        data-item-id="2"
+        data-item-name="Bacon"
+        data-item-price="3.00"
+        data-item-weight="20"
+        data-item-url="http://myapp.com/products/bacon"
+        data-item-description="Some fresh bacon">
+    Button
+</button>
 
 <script>
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
