@@ -10,6 +10,17 @@ header {
     .mdc-top-app-bar__row {
         height: 100px;
     }
+
+    label.mdc-top-app-bar__navigation-icon {
+        display: none;
+        user-select: none;
+    }
+
+    @media (max-width: 640px) {
+        label.mdc-top-app-bar__navigation-icon {
+            display: block;
+        }
+    }
 }
 
 #menu-checkbox + .menu-wrapper {
@@ -21,6 +32,10 @@ header {
 }
 
 .menu-wrapper {
-    margin-top: 100px;
-    background-color: red;
+    position: fixed;
+    top: 100px;
+    background-color: lightgray;
+    width: 100%;
+    height: calc(100vh - 100px);
+    z-index: 1;
 }
