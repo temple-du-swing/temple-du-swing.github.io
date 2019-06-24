@@ -1,6 +1,6 @@
 header {
     &.mdc-top-app-bar {
-        background-color: gray;
+        background-color: white;
 
         &--fixed {
             top: 0;
@@ -11,13 +11,18 @@ header {
         height: 100px;
     }
 
-    label.mdc-top-app-bar__navigation-icon {
+    .tds-logo {
+        margin-left: 16px;
+    }
+
+    label.material-icons.mdc-top-app-bar__action-item {
         display: none;
         user-select: none;
+        color: black;
     }
 
     @media (max-width: 640px) {
-        label.mdc-top-app-bar__navigation-icon {
+        label.material-icons.mdc-top-app-bar__action-item {
             display: block;
         }
     }
@@ -34,7 +39,7 @@ header {
 .menu-wrapper {
     position: fixed;
     top: 100px;
-    background-color: lightgray;
+    background-color: white;
     width: 100%;
     height: calc(100vh - 100px);
     z-index: 1;
