@@ -28,18 +28,37 @@ header {
     }
 }
 
-#menu-checkbox + .menu-wrapper {
+#menu-checkbox {
     display: none;
+
+    & ~ .menu-wrapper {
+        display: none;
+    }
+
+    & ~ .tds-close {
+        display: none;
+    }
+
+    &:checked {
+        & ~ .menu-wrapper {
+            display: block;
+        }
+
+        & ~ .tds-menu {
+            display: none;
+        }
+
+        & ~ .tds-close {
+            display: block;
+        }
+    }
 }
 
-#menu-checkbox:checked + .menu-wrapper {
-    display: block;
-}
-
-.menu-wrapper {
+nav.menu-wrapper {
     position: fixed;
     top: 100px;
     background-color: white;
+    color: black;
     width: 100%;
     height: calc(100vh - 100px);
     z-index: 1;
