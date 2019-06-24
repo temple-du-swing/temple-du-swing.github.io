@@ -16,14 +16,24 @@ header {
     }
 
     label.material-icons.mdc-top-app-bar__action-item {
-        display: none;
         user-select: none;
         color: black;
     }
 
+    section.small,
+    section.big {
+        display: none;
+    }
+
     @media (max-width: 640px) {
-        label.material-icons.mdc-top-app-bar__action-item {
-            display: block;
+        section.small {
+            display: inline-flex;
+        }
+    }
+
+    @media (min-width: 640px) {
+        section.big {
+            display: inline-flex;
         }
     }
 }
