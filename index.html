@@ -2,28 +2,30 @@
 layout: default
 title: Temple du Swing
 ---
-<h1>{{ "Hello World!" | downcase }}</h1>
+<div class="content">
+    <h1>{{ "Hello World!" | downcase }}</h1>
 
+    <p>My super product !</p>
 
-<p>My super product !</p>
-<button class="foo-button mdc-button snipcart-add-item"
-        data-item-id="2"
-        data-item-name="Bacon"
-        data-item-price="3.00"
-        data-item-weight="20"
-        data-item-url="http://myapp.com/products/bacon"
-        data-item-description="Some fresh bacon"
-        data-item-max-quantity="1"
-        data-item-stackable="false"
-        data-item-custom1-name="Nom"
-        data-item-custom1-required="true"
-        data-item-custom2-name="Prénom"
-        data-item-custom2-required="true"
-        data-item-custom3-name="Rôle"
-        data-item-custom3-options="Leader|Follower"
-        data-item-custom3-required="true">
-    Button
-</button>
+    <button class="foo-button mdc-button snipcart-add-item"
+            data-item-id="2"
+            data-item-name="Bacon"
+            data-item-price="3.00"
+            data-item-weight="20"
+            data-item-url="http://myapp.com/products/bacon"
+            data-item-description="Some fresh bacon"
+            data-item-max-quantity="1"
+            data-item-stackable="false"
+            data-item-custom1-name="Nom"
+            data-item-custom1-required="true"
+            data-item-custom2-name="Prénom"
+            data-item-custom2-required="true"
+            data-item-custom3-name="Rôle"
+            data-item-custom3-options="Leader|Follower"
+            data-item-custom3-required="true">
+        Button
+    </button>
+</div>
 
 <script>
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
