@@ -10,7 +10,17 @@ header {
     .mdc-top-app-bar__row {
         height: 100px;
     }
+}
 
-    .tds-logo {
-    }
+#menu-checkbox + .menu-wrapper {
+    display: none;
+}
+
+#menu-checkbox:checked + .menu-wrapper {
+    display: block;
+}
+
+.menu-wrapper {
+    margin-top: 100px;
+    background-color: red;
 }
