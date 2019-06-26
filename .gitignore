@@ -2,3 +2,4 @@
 /_site
 Gemfile.lock
 .env
+/_data/contentful/

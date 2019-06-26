@@ -1,0 +1,10 @@
+# _config.yml
+
+contentful:
+  spaces:
+    - fr:
+        space: ENV_CONTENTFUL_SPACE_ID
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN
+        all_entries: true
+        cda_query:
+          locale: fr
