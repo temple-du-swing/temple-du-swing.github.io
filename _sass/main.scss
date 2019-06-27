@@ -10,6 +10,12 @@ body {
     height: calc(100vh - 100px);
 }
 
+.background {
+    background-color: #EA4664;
+    background-image: url(/assets/images/background.png);
+    background-position: center;
+}
+
 .red {
     background-color: lightpink;
 }
