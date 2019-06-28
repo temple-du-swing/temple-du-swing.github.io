@@ -14,9 +14,55 @@ title: Temple du Swing
 </div>
 
 <div class="area">
+    <h1>Stripe (test)</h1>
+
+    <p>My super product (Stripe)!</p>
+
+    <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em" id="checkout-button-sku_FKvYPe1N6rPAg4" role="link">
+        Checkout
+    </button>
+
+    <div id="error-message"></div>
+
+    <script>
+        var stripe = Stripe('pk_test_KYGBzLMn7qYwOzZT2Pc3cJWa00bEYC5J0q');
+
+        var checkoutButton = document.getElementById('checkout-button-sku_FKvYPe1N6rPAg4');
+        checkoutButton.addEventListener('click', function () {
+            // When the customer clicks on the button, redirect
+            // them to Checkout.
+            stripe.redirectToCheckout({
+                items: [
+                    {
+                        sku: 'sku_FKvYPe1N6rPAg4',
+                        quantity: 1
+                    }
+                ],
+
+                // Do not rely on the redirect to the successUrl for fulfilling
+                // purchases, customers may not always reach the success_url after
+                // a successful payment.
+                // Instead use one of the strategies described in
+                // https://stripe.com/docs/payments/checkout/fulfillment
+                successUrl: 'http://127.0.0.1:4000/success',
+                cancelUrl: 'http://127.0.0.1:4000/canceled',
+            })
+            .then(function (result) {
+                if (result.error) {
+                    // If `redirectToCheckout` fails due to a browser or network
+                    // error, display the localized error message to your customer.
+                    var displayError = document.getElementById('error-message');
+                    displayError.textContent = result.error.message;
+                }
+            });
+        });
+</script>
+</div>
+
+<div class="area">
     <h1>{{ "Hello World!" | downcase }}</h1>
 
-    <p>My super product !</p>
+    <p>My super product (Snipcart)!</p>
 
     <button class="foo-button mdc-button snipcart-add-item"
             data-item-id="2"
